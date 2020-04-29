@@ -6,8 +6,12 @@ function subtract (num1, num2) {
 	return num1 - num2;
 }
 
-function sum () {
-
+function sum (numbers) {
+	let total = 0;
+	for (let number of numbers){
+		total += number;
+	}
+	return total;
 }
 
 function multiply () {
