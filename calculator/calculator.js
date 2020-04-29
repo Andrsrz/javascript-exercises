@@ -1,17 +1,17 @@
-function add () {
-	
+function add (num1, num2) {
+	return num1 + num2;
 }
 
 function subtract () {
-	
+
 }
 
 function sum () {
-	
+
 }
 
 function multiply () {
-	
+
 }
 
 function power() {
@@ -27,6 +27,6 @@ module.exports = {
 	subtract,
 	sum,
 	multiply,
-    power,
+	power,
 	factorial
 }
