@@ -1,11 +1,21 @@
 const palindromes = function(phrase) {
 	let reversedPhrase = '';
+	let phraseWithoutPunctuation = '';
+	phrase = phrase.toLowerCase();
+	let punctuation = ['!',',','.',' '];
 
-	for (let i = phrase.length - 1; i >= 0; i--){
-		reversedPhrase += phrase[i];
+	/* CREATE NEW STRING WITHOUT PUNCTUATION */
+	for(let i = 0; i < phrase.length; i++){
+		if(punctuation.includes(phrase[i]))
+			continue;
+		phraseWithoutPunctuation += phrase[i];
 	}
 
-	return phrase == reversedPhrase;
+	for(let i = phraseWithoutPunctuation.length - 1; i >= 0; i--){
+		reversedPhrase += phraseWithoutPunctuation[i];
+	}
+
+	return phraseWithoutPunctuation == reversedPhrase;
 }
 
 module.exports = palindromes
