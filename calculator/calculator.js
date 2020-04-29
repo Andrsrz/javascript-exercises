@@ -22,8 +22,12 @@ function multiply (numbers) {
 	return total;
 }
 
-function power() {
-	
+function power(base, exponent) {
+	let power = 1;
+	for(let i = 0; i < exponent; i++){
+		power *= base;
+	}
+	return power;
 }
 
 function factorial() {
