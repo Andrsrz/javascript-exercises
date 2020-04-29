@@ -30,8 +30,16 @@ function power(base, exponent) {
 	return power;
 }
 
-function factorial() {
-	
+function factorial(number) {
+	let factorial = 1;
+
+	if (number == 0 || number == 1)
+		return factorial;
+
+	for(let i = number; i > 1; i--){
+		factorial *= i;
+	}
+	return factorial;
 }
 
 module.exports = {
